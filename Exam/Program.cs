@@ -44,7 +44,7 @@ namespace Exam
 
 
                 int n;
-                
+                int v;
                do
                 {
                     Console.WriteLine("Введите номер персонажа, чтобы посмотреть его характеристики( 1 - Иван, 2 - Вася), нажмите 3, чтобы начать бой. 5 - выйти.");
@@ -68,12 +68,14 @@ namespace Exam
                            
                             break;
                         case 3:
-                            Console.WriteLine("Введите номер , чтобы поровести симуляцию боя Ивана и Васи( 1 - Бьет Иван, 2 - Бьет Вася), 5 - выйти.");
-                            int v = Convert.ToInt32(Console.ReadLine());
-                            while (v < 5)
+                            
+                            do
                             {
+                                Console.WriteLine("Введите номер , чтобы поровести симуляцию боя Ивана и Васи( 1 - Бьет Иван, 2 - Бьет Вася), 5 - выйти.");
+                                v = Convert.ToInt32(Console.ReadLine());
                                 switch (v)
                                 {
+                                  
                                     case 1:
                                         a1 = a1 - 150;
                                         Console.WriteLine("Иван");
@@ -91,7 +93,7 @@ namespace Exam
                                         {
                                             Console.WriteLine("Ivan Win!");
                                         }
-                                        Console.ReadLine();
+                                    
 
                                         break;
                                     case 2:
@@ -111,17 +113,19 @@ namespace Exam
                                         {
                                             Console.WriteLine("Vasya Win!");
                                         }
-                                        Console.ReadLine();
+                                       
                                         break;
-                                        
+
                                     default:
                                         Console.WriteLine("Такой команды нет");
                                         break;
                                 }
-                                Console.ReadLine();
+                               
 
                             }
+                            while (v < 5);
                             break;
+
                            
                            
                         default:
