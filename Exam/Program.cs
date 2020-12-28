@@ -6,7 +6,9 @@ namespace Exam
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Leave hope behind all who enters here...");
+            Hero hero1 = new Hero("Герой", 1000, 50, 10, 30);
+            Hero hero2 = new Hero("Самозванник", 600, 10, 50, 50);
+            hero1.Damage(hero2);
         }
     }
 }
